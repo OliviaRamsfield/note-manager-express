@@ -15,7 +15,7 @@
       integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
 
   <body>
@@ -30,7 +30,7 @@
       <div class="row">
         <div class="col-4 list-container">
           <div class="card">
-            <ul class="list-group"></ul>
+            <ul class="list-group" id="saved-notes"></ul>
           </div>
         </div>
         <div class="col-8">
@@ -40,10 +40,28 @@
             maxlength="28"
             type="text"
           />
-          <textarea class="note-textarea" placeholder="Note Text"></textarea>
+          <textarea
+            class="note-textarea"
+            oninput="displaySaveIcon()"
+            placeholder="Note Text"
+          ></textarea>
         </div>
       </div>
     </div>
-    <script src="/assets/js/index.js"></script>
+    <script>
+      var saveIcon = document.getElementsByClassName("save-note");
+      var noteBody = document.getElementsByClassName("note-textarea");
+      var noteTitleText = document.getElementsByClassName("note-title");
+      function displaySaveIcon() {
+        if (noteBody == "" && noteTitleText == "") {
+          console.log("Please fill out all text fields.");
+        } else {
+          console.log(saveIcon);
+          saveIcon.style.display = "block";
+        }
+      }
+    </script>
+    <script src="./assets/js/index.js"></script>
+    <script src="../server.js"></script>
   </body>
 </html>
