@@ -40,28 +40,10 @@
             maxlength="28"
             type="text"
           />
-          <textarea
-            class="note-textarea"
-            oninput="displaySaveIcon()"
-            placeholder="Note Text"
-          ></textarea>
+          <textarea class="note-textarea" placeholder="Note Text"></textarea>
         </div>
       </div>
     </div>
-    <script>
-      var saveIcon = document.getElementsByClassName("save-note");
-      var noteBody = document.getElementsByClassName("note-textarea");
-      var noteTitleText = document.getElementsByClassName("note-title");
-      function displaySaveIcon() {
-        if (noteBody == "" && noteTitleText == "") {
-          console.log("Please fill out all text fields.");
-        } else {
-          console.log(saveIcon);
-          saveIcon.style.display = "block";
-        }
-      }
-    </script>
     <script src="./assets/js/index.js"></script>
-    <script src="../server.js"></script>
   </body>
 </html>
