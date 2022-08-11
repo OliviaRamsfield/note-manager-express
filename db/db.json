@@ -1,14 +1,14 @@
 {
   "notes": [
     {
-      "title": "Test Title",
-      "text": "Test text",
-      "id": "0"
-    },
-    {
       "title": "House",
       "text": "Call plumber",
       "id": "1"
+    },
+    {
+      "title": "Wash",
+      "text": "Do wash tomorrow",
+      "id": "2"
     }
   ]
 }

@@ -39,8 +39,7 @@ const saveNote = (note) =>
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(note),
-    //.then() if (response.ok) {getnotes()} else {alert: "There was an error saving the note."}
+    body: JSON.stringify(note)
   });
 
 const deleteNote = (id) =>
